@@ -1,0 +1,15 @@
+{
+  "name": "level1",
+  "version": "1.0.0",
+  "description": "We are building an online night-shift manager. Let's call it Planning de Garde :)",
+  "main": "main.js",
+  "dependencies": {
+    "write-json-file": "^3.1.0"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "benjamin winckell",
+  "license": "ISC"
+}

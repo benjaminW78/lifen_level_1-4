@@ -1,0 +1,19 @@
+{
+  "name": "level2",
+  "version": "1.0.0",
+  "description": "A worker is either a `medic` or an `intern` and their shifts are paid according their status.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "mocha"
+  },
+  "author": "benjamin winckell",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.0.0",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "write-json-file": "^3.1.0"
+  }
+}

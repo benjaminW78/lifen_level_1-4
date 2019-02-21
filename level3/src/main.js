@@ -4,17 +4,17 @@ const Moment = require('moment')
 const WorkersStatus = require('./const_workers_status')
 const DaysMultiplicators = require('./const_day_price_multiplicator')
 const { workers: Workers, shifts: Shifts } = require('../data')
+const outputPath = './dir/output.json'
 
 async function main() {
+    const payload = []
+
     try {
-        const outputPath = './dir/output.json'
         const workerMap = Workers.reduce((acc, item) => {
             acc[item.id] = item
             acc[item.id].price_per_shift = WorkersStatus[acc[item.id].status]
             return acc
         }, {})
-
-        const payload = []
 
         Shifts.forEach((item) => {
             const userId = item.user_id

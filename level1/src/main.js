@@ -1,16 +1,16 @@
 const writeJsonFile = require('write-json-file')
 
 const { workers: Workers, shifts: Shifts } = require('../data')
+const outputPath = './dir/output.json'
 
 async function main() {
+    const payload = []
+
     try {
-        const outputPath = './dir/output.json'
         const workerMap = Workers.reduce((acc, item) => {
             acc[item.id] = item
             return acc
         }, {})
-
-        const payload = []
 
         Shifts.forEach((item) => {
             const userId = item.user_id
@@ -26,8 +26,8 @@ async function main() {
             if (!payload[userId].price) {
                 payload[userId].price = 0
             }
-            payload[userId].price += workerMap[userId].price_per_shift
 
+            payload[userId].price += workerMap[userId].price_per_shift
         })
 
         await writeJsonFile(outputPath, {

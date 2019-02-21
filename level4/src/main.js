@@ -7,18 +7,19 @@ const { workers: Workers, shifts: Shifts } = require('../data')
 const outputPath = './dir/output.json'
 
 async function main() {
+    const workerPayload = []
+    const commission = {
+        pdg_fee: 0,
+        interim_shifts: 0
+    }
+
     try {
+
         const workerMap = Workers.reduce((acc, item) => {
             acc[item.id] = item
             acc[item.id].price_per_shift = WorkersStatus[acc[item.id].status]
             return acc
         }, {})
-
-        const workerPayload = []
-        const commission = {
-            pdg_fee: 0,
-            interim_shifts: 0
-        }
 
         Shifts.forEach((item) => {
             const userId = item.user_id
@@ -42,6 +43,7 @@ async function main() {
             workerPayload[userId].price += priceToSum
 
             commission.pdg_fee += (priceToSum * 5) / 100
+            // calculate service  interim fee
             if (workerMap[userId].status === 'interim') {
                 commission.interim_shifts += 1
                 commission.pdg_fee += 80

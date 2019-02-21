@@ -4,7 +4,7 @@
   "description": "A worker is either a `medic` or an `intern` and their shifts are paid according their status.",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node ./src/main.js",
     "test": "mocha"
   },
   "author": "benjamin winckell",

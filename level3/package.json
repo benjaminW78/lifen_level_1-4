@@ -4,7 +4,7 @@
   "description": "Not all shifts have the same duration. Shifts happening on a saturday or a sunday last longer and are paid twice the normal fee.",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node ./src/main.js",
     "test": "mocha"
   },
   "author": "winckell benjamin",

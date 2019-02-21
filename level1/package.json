@@ -7,7 +7,7 @@
     "write-json-file": "^3.1.0"
   },
   "scripts": {
-    "start": "node main.js",
+    "start": "node ./src/main.js",
     "test": "mocha"
   },
   "author": "benjamin winckell",

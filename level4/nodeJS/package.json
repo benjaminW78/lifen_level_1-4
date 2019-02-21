@@ -1,0 +1,20 @@
+{
+  "name": "level4",
+  "version": "1.0.0",
+  "description": "Our (fictional) business model is to price our service 5% of each shift. In addition to that we also help hospitals to fill in unassigned shifts with interim workers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "mocha"
+  },
+  "author": "winckell benjamin",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "write-json-file": "^3.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.0",
+    "should": "^13.2.3"
+  }
+}

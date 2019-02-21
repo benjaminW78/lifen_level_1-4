@@ -1,6 +1,7 @@
 # Nodejs benjamin answers
 **/*/dir/
 **/*/node_modules/
+**/*/.idea
 
 # Compiled source #
 ###################

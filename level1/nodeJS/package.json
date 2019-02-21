@@ -1,0 +1,19 @@
+{
+  "name": "level1",
+  "version": "1.0.0",
+  "description": "We are building an online night-shift manager. Let's call it Planning de Garde :)",
+  "main": "main.js",
+  "dependencies": {
+    "write-json-file": "^3.1.0"
+  },
+  "scripts": {
+    "start": "node main.js",
+    "test": "mocha"
+  },
+  "author": "benjamin winckell",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.0.0",
+    "should": "^13.2.3"
+  }
+}

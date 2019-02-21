@@ -1,4 +1,4 @@
-const writeJsonFile = require('write-json-file')
+const WriteJsonFile = require('write-json-file')
 
 const WorkersStatus = require('./const_workers_status')
 const { workers: Workers, shifts: Shifts } = require('../data')
@@ -32,7 +32,7 @@ async function main() {
 
         })
 
-        await writeJsonFile(outputPath, {
+        await WriteJsonFile(outputPath, {
             workers: payload.filter(item => item !== null)
         })
 

@@ -1,4 +1,4 @@
-# Level 1 result
+# Level 2 result
 You can found level 1 project inside `./nodeJS/` directory
 ## how to run the code
 
